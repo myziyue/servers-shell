@@ -1,0 +1,64 @@
+#! /bin/sh
+#alipaybox alipaybox-wifi alipaybox-login
+svndata_DIR=/mnt/svn_data/
+#ios
+ios_svndata_DIR=/mnt/svndata/ios
+#android
+android_svndata_DIR=/mnt/svndata/android
+#alipayBox
+alipayBox_svndata_DIR=/mnt/svndata/alipayBox
+
+svn_BIN=svnserve
+svn_status_CMD=`ps -fe | grep "svnserve" | grep -v "grep" | wc -l` 
+
+case "$1" in
+	start)
+		echo -n "Starting svn "
+
+		$svn_BIN -d -r $svndata_DIR
+		$svn_BIN -d --listen-port 3691 -r $ios_svndata_DIR
+		$svn_BIN -d --listen-port 3692 -r $android_svndata_DIR
+		$svn_BIN -d --listen-port 3693 -r $alipayBox_svndata_DIR
+
+		if [ "$?" != 0 ] ; then
+			echo " failed"
+			exit 1
+		fi
+		echo "success"
+		exit 1
+	;;
+
+	stop)
+		echo -n "Gracefully shutting down svn "
+
+		kill -QUIT `ps -fe | grep "svnserve" | grep -v "grep" | awk '{print $2}'`
+
+		if [ "$?" != 0 ] ; then
+			echo " failed. Use force-quit"
+			exit 1
+		else
+			echo " done"
+		fi
+	;;
+
+	status)
+		if [ $svn_status_CMD -lt 1 ] ; then
+
+			echo "svn is stopped"
+			exit 0
+		else
+			echo "svn is running ..."
+			exit 0
+		fi
+	;;
+
+	restart)
+		$0 stop
+		$0 start
+	;;
+	*)
+		echo "Usage: $0 {start|stop|restart|status}"
+		exit 1
+	;;
+
+esac
