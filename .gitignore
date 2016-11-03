@@ -10,3 +10,5 @@ Desktop.ini
 .DS_Store
 .svn
 
+# 临时排除
+/bcw
