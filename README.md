@@ -25,9 +25,3 @@
     * [服务器带宽检查脚本](./system/vmnetcheckutf8.sh)
     * [vm负载状态检查脚本](./system/vmstatuscheck.sh)
     * [web日志分析脚本](./system/weblogcheckutf8.sh)
-
-* 软件包
-
-    * Elasticsearch项目相关项目尝试
-        * [ec1.7.0+logstash+ik](./Sofeware/EC/ec1.7.0+logstash+ik)    
-        * [ec2.1+logstash+ik](./Sofeware/EC/ec2.1+logstash+ik) 
