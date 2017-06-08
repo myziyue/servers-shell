@@ -15,6 +15,7 @@
     * [RabbitMQ一键安装](./1key-install-shell/sh-RabbitMQ/)
     * [Redis一键安装](./1key-install-shell/sh-Redis/)
     * [VPN一键安装](./1key-install-shell/sh-vpn/)
+    * [PHP5.6一键安装](./1key-install-shell/sh-php5.6/)
 
 * 版本发布脚本
 
