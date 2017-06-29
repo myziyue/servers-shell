@@ -11,11 +11,12 @@
     * [Python2.7一键安装](./1key-install-shell/sh-installPython2.7/)
     * [lua-nginx一键安装](./1key-install-shell/sh-lua-nginx/)
     * [nginx一键安装](./1key-install-shell/sh-nginx/)
+    * [Node.js一键安装](./1key-install-shell/sh-nodejs/)
     * [phabricator一键安装](./1key-install-shell/sh-phabricator-0.1/)
+    * [PHP5.6一键安装](./1key-install-shell/sh-php5.6/)
     * [RabbitMQ一键安装](./1key-install-shell/sh-RabbitMQ/)
     * [Redis一键安装](./1key-install-shell/sh-Redis/)
     * [VPN一键安装](./1key-install-shell/sh-vpn/)
-    * [PHP5.6一键安装](./1key-install-shell/sh-php5.6/)
 
 * 版本发布脚本
 
